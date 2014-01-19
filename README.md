@@ -90,8 +90,8 @@ Translations of the guide are available in the following languages:
 > probably right... <br/>
 > -- Jerry Coffin (on indentation)
 
-* Use `UTF-8` as the source file encoding.
-* Use two **spaces** per indentation level (aka soft tabs). No hard tabs.
+* Use `UTF-8` as the source file encoding. [[link]](#utf8)
+* Use two **spaces** per indentation level (aka soft tabs). No hard tabs. [[link]](#two-spaces)
 
     ```Ruby
     # bad - four spaces
@@ -106,7 +106,7 @@ Translations of the guide are available in the following languages:
     ```
 
 * Use Unix-style line endings. (*BSD/Solaris/Linux/OS X users are covered by default,
-  Windows users have to be extra careful.)
+  Windows users have to be extra careful.) [[link]](#line-endings)
     * If you're using Git you might want to add the following
     configuration setting to protect your project from Windows line
     endings creeping in:
@@ -116,7 +116,7 @@ Translations of the guide are available in the following languages:
     ```
 
 * Don't use `;` to separate statements and expressions. As a
-  corollary - use one expression per line.
+  corollary - use one expression per line. [[link]](#one-expression)
 
     ```Ruby
     # bad
@@ -133,7 +133,7 @@ Translations of the guide are available in the following languages:
     puts 'foo', 'bar' # this applies to puts in particular
     ```
 
-* Prefer a single-line format for class definitions with no body.
+* Prefer a single-line format for class definitions with no body. [[link]](#no-body)
 
     ```Ruby
     # bad
@@ -150,7 +150,7 @@ Translations of the guide are available in the following languages:
 * Avoid single-line methods. Although they are somewhat popular in the
   wild, there are a few peculiarities about their definition syntax
   that make their use undesirable. At any rate - there should be no more
-  than one expression in a single-line method.
+  than one expression in a single-line method. [[link]](#single-line-methods)
 
     ```Ruby
     # bad
@@ -181,7 +181,7 @@ Translations of the guide are available in the following languages:
 * Use spaces around operators, after commas, colons and semicolons, around `{`
   and before `}`. Whitespace might be (mostly) irrelevant to the Ruby
   interpreter, but its proper use is the key to writing easily
-  readable code.
+  readable code. [[link]](#operator-whitespace)
 
     ```Ruby
     sum = 1 + 2
@@ -233,14 +233,14 @@ Translations of the guide are available in the following languages:
     (arguably) a bit more readable. As with hashes - pick one style
     and apply it consistently.
 
-* No spaces after `(`, `[` or before `]`, `)`.
+* No spaces after `(`, `[` or before `]`, `)`. [[link]](#bracket-whitespace)
 
     ```Ruby
     some(arg).other
     [1, 2, 3].size
     ```
 
-* No space after `!`.
+* No space after `!`. [[link]](#exclamation-whitespace)
 
     ```Ruby
     # bad
@@ -252,7 +252,7 @@ Translations of the guide are available in the following languages:
 
 * Indent `when` as deep as `case`. I know that many would disagree
   with this one, but it's the style established in both "The Ruby
-  Programming Language" and "Programming Ruby".
+  Programming Language" and "Programming Ruby". [[link]](#indent-case)
 
     ```Ruby
     # bad
@@ -280,7 +280,7 @@ Translations of the guide are available in the following languages:
     end
     ```
 
-* When assigning the result of a conditional expression to a variable, preserve the usual alignment of its branches.
+* When assigning the result of a conditional expression to a variable, preserve the usual alignment of its branches. [[link]](#conditional-alignment)
 
     ```Ruby
     # bad - pretty convoluted
@@ -335,7 +335,7 @@ Translations of the guide are available in the following languages:
     ```
 
 * Use empty lines between method definitions and also to break up a method into logical
-  paragraphs internally.
+  paragraphs internally. [[link]](#empty-lines)
 
     ```Ruby
     def some_method
@@ -352,7 +352,7 @@ Translations of the guide are available in the following languages:
     ```
 
 * Avoid comma after the last parameter in a method call, especially when the
-  parameters are not on separate lines.
+  parameters are not on separate lines. [[link]](#avoid-comma)
 
     ```Ruby
     # bad - easier to move/add/remove parameters, but still not preferred
@@ -369,7 +369,7 @@ Translations of the guide are available in the following languages:
     some_method(size, count, color)
     ```
 
-* Use spaces around the `=` operator when assigning default values to method parameters:
+* Use spaces around the `=` operator when assigning default values to method parameters: [[link]](#assignment-whitespace)
 
     ```Ruby
     # bad
@@ -387,7 +387,7 @@ Translations of the guide are available in the following languages:
     in practice (and arguably a bit more readable).
 
 * Avoid line continuation `\` where not required. In practice, avoid using
-  line continuations for anything but string concatenation.
+  line continuations for anything but string concatenation. [[link]](#line-continuation)
 
     ```Ruby
     # bad
@@ -402,7 +402,7 @@ Translations of the guide are available in the following languages:
                   ' and second part of the long string'
     ```
 
-* When continuing a chained method invocation on another line keep the `.` on the second line.
+* When continuing a chained method invocation on another line keep the `.` on the second line. [[link]](#chained-method-lines)
 
     ```Ruby
     # bad - need to consult first line to understand second line
@@ -417,7 +417,7 @@ Translations of the guide are available in the following languages:
 * Align the parameters of a method call if they span more than one
   line. When aligning parameters is not appropriate due to line-length
   constraints, single indent for the lines after the first is also
-  acceptable.
+  acceptable. [[link]](#align-parameters)
 
     ```Ruby
     # starting point (line is too long)
@@ -453,7 +453,7 @@ Translations of the guide are available in the following languages:
     end
     ```
 
-* Align the elements of array literals spanning multiple lines.
+* Align the elements of array literals spanning multiple lines. [[link]](#align-array-elements)
 
     ```Ruby
     # bad - single indent
@@ -472,7 +472,7 @@ Translations of the guide are available in the following languages:
        "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"]
     ```
 
-* Add underscores to large numeric literals to improve their readability.
+* Add underscores to large numeric literals to improve their readability. [[link]](#numeric-underscores)
 
     ```Ruby
     # bad - how many 0s are there?
@@ -483,11 +483,11 @@ Translations of the guide are available in the following languages:
     ```
 
 * Use RDoc and its conventions for API documentation.  Don't put an
-  empty line between the comment block and the `def`.
-* Limit lines to 80 characters.
-* Avoid trailing whitespace.
+  empty line between the comment block and the `def`. [[link]](#api-documentation)
+* Limit lines to 80 characters. [[link]](#line-limit)
+* Avoid trailing whitespace. [[link]](#trailing-whitespace)
 * Don't use block comments. They cannot be preceded by whitespace and are not
-as easy to spot as regular comments.
+as easy to spot as regular comments. [[link]](#block-comments)
 
     ```Ruby
     # bad
@@ -505,7 +505,7 @@ as easy to spot as regular comments.
 
 * Use `::` only to reference constants(this includes classes and
 modules) and constructors (like `Array()` or `Nokogiri::HTML()`).
-Never use `::` for regular method invocation.
+Never use `::` for regular method invocation. [[link]](#double-colon)
 
     ```Ruby
     # bad
@@ -520,7 +520,7 @@ Never use `::` for regular method invocation.
     ```
 
 * Use `def` with parentheses when there are arguments. Omit the
-  parentheses when the method doesn't accept any arguments.
+  parentheses when the method doesn't accept any arguments. [[link]](#definition-paren)
 
      ```Ruby
      # bad
@@ -548,7 +548,7 @@ Never use `::` for regular method invocation.
   should be used instead. `for` is implemented in terms of `each` (so
   you're adding a level of indirection), but with a twist - `for`
   doesn't introduce a new scope (unlike `each`) and variables defined
-  in its block will be visible outside it.
+  in its block will be visible outside it. [[link]](#for)
 
     ```Ruby
     arr = [1, 2, 3]
@@ -568,7 +568,7 @@ Never use `::` for regular method invocation.
     elem #=> NameError: undefined local variable or method `elem'
     ```
 
-* Never use `then` for multi-line `if/unless`.
+* Never use `then` for multi-line `if/unless`. [[link]](#then)
 
     ```Ruby
     # bad
@@ -582,7 +582,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Always put the condition on the same line as the `if`/`unless` in a multi-line conditional.
+* Always put the condition on the same line as the `if`/`unless` in a multi-line conditional. [[link]](#condition-line)
 
     ```Ruby
     # bad
@@ -600,7 +600,7 @@ Never use `::` for regular method invocation.
     ```
 
 * Favor the ternary operator(`?:`) over `if/then/else/end` constructs.
-  It's more common and obviously more concise.
+  It's more common and obviously more concise. [[link]](#ternary)
 
     ```Ruby
     # bad
@@ -612,7 +612,7 @@ Never use `::` for regular method invocation.
 
 * Use one expression per branch in a ternary operator. This
   also means that ternary operators must not be nested. Prefer
-  `if/else` constructs in these cases.
+  `if/else` constructs in these cases. [[link]](#ternary-single-expression)
 
     ```Ruby
     # bad
@@ -627,7 +627,7 @@ Never use `::` for regular method invocation.
     ```
 
 * Never use `if x: ...` - as of Ruby 1.9 it has been removed. Use
-  the ternary operator instead.
+  the ternary operator instead. [[link]](#if-x)
 
     ```Ruby
     # bad
@@ -637,14 +637,14 @@ Never use `::` for regular method invocation.
     result = some_condition ? something : something_else
     ```
 
-* Never use `if x; ...`. Use the ternary operator instead.
+* Never use `if x; ...`. Use the ternary operator instead. [[link]](#if-x-2)
 
 * Use `when x then ...` for one-line cases. The alternative syntax
-  `when x: ...` has been removed as of Ruby 1.9.
+  `when x: ...` has been removed as of Ruby 1.9. [[link]](#when-x)
 
-* Never use `when x; ...`. See the previous rule.
+* Never use `when x; ...`. See the previous rule. [[link]](#when-x-2)
 
-* Use `!` instead of `not`.
+* Use `!` instead of `not`. [[link]](#not)
 
     ```Ruby
     # bad - braces are required because of op precedence
@@ -654,7 +654,7 @@ Never use `::` for regular method invocation.
     x = !something
     ```
 
-* Avoid the use of `!!`.
+* Avoid the use of `!!`. [[link]](#double-exclamation)
 
     ```Ruby
     # bad
@@ -676,7 +676,7 @@ Never use `::` for regular method invocation.
     ```
 
 * The `and` and `or` keywords are banned. It's just not worth
-  it. Always use `&&` and `||` instead.
+  it. Always use `&&` and `||` instead. [[link]](#and-or)
 
     ```Ruby
     # bad
@@ -698,10 +698,10 @@ Never use `::` for regular method invocation.
     document.saved? || document.save!
     ```
 
-* Avoid multi-line `?:` (the ternary operator); use `if/unless` instead.
+* Avoid multi-line `?:` (the ternary operator); use `if/unless` instead. [[link]](#multi-line-ternary)
 
 * Favor modifier `if/unless` usage when you have a single-line
-  body. Another good alternative is the usage of control flow `&&/||`.
+  body. Another good alternative is the usage of control flow `&&/||`. [[link]](#if-unless-single-line)
 
     ```Ruby
     # bad
@@ -716,7 +716,7 @@ Never use `::` for regular method invocation.
     some_condition && do_something
     ```
 
-* Favor `unless` over `if` for negative conditions (or control
+* Favor `unless` over `if` for negative conditions (or control [[link]](#unless-over-if)
   flow `||`).
 
     ```Ruby
@@ -733,7 +733,7 @@ Never use `::` for regular method invocation.
     some_condition || do_something
     ```
 
-* Never use `unless` with `else`. Rewrite these with the positive case first.
+* Never use `unless` with `else`. Rewrite these with the positive case first. [[link]](#unless-and-else)
 
     ```Ruby
     # bad
@@ -751,7 +751,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Don't use parentheses around the condition of an `if/unless/while/until`.
+* Don't use parentheses around the condition of an `if/unless/while/until`. [[link]](#condition-paren)
 
     ```Ruby
     # bad
@@ -765,7 +765,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Never use `while/until condition do` for multi-line `while/until`.
+* Never use `while/until condition do` for multi-line `while/until`. [[link]](#multi-line-while)
 
     ```Ruby
     # bad
@@ -787,7 +787,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Favor modifier `while/until` usage when you have a single-line
+* Favor modifier `while/until` usage when you have a single-line [[link]](#single-line-while)
   body.
 
     ```Ruby
@@ -800,7 +800,7 @@ Never use `::` for regular method invocation.
     do_something while some_condition
     ```
 
-* Favor `until` over `while` for negative conditions.
+* Favor `until` over `while` for negative conditions. [[link]](#prefer-until)
 
     ```Ruby
     # bad
@@ -810,7 +810,7 @@ Never use `::` for regular method invocation.
     do_something until some_condition
     ```
 
-* Use `Kernel#loop` with break rather than `begin/end/until` or `begin/end/while` for post-loop tests.
+* Use `Kernel#loop` with break rather than `begin/end/until` or `begin/end/while` for post-loop tests. [[link]](#post-loop-tests)
 
    ```Ruby
    # bad
@@ -831,7 +831,7 @@ Never use `::` for regular method invocation.
   internal DSL (e.g. Rake, Rails, RSpec), methods that have
   "keyword" status in Ruby (e.g. `attr_reader`, `puts`) and attribute
   access methods. Use parentheses around the arguments of all other
-  method invocations.
+  method invocations. [[link]](#parameter-parentheses)
 
     ```Ruby
     class Person
@@ -851,7 +851,7 @@ Never use `::` for regular method invocation.
     bowling.score.should == 0
     ```
 
-* Omit the outer braces around an implicit options hash.
+* Omit the outer braces around an implicit options hash. [[link]](#implicit-hash)
 
     ```Ruby
     # bad
@@ -862,7 +862,7 @@ Never use `::` for regular method invocation.
     ```
 
 * Omit both the outer braces and parentheses for methods that are
-  part of an internal DSL.
+  part of an internal DSL. [[link]](#internal-dsl)
 
     ```Ruby
     class Person < ActiveRecord::Base
@@ -874,7 +874,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Omit parentheses for method calls with no arguments.
+* Omit parentheses for method calls with no arguments. [[link]](#paren-no-arguments)
 
     ```Ruby
     # bad
@@ -894,7 +894,7 @@ Never use `::` for regular method invocation.
   `{...}` for multi-line blocks (multiline chaining is always
   ugly). Always use `do...end` for "control flow" and "method
   definitions" (e.g. in Rakefiles and certain DSLs).  Avoid `do...end`
-  when chaining.
+  when chaining. [[link]](#curly-brace-blocks)
 
     ```Ruby
     names = ['Bozhidar', 'Steve', 'Sarah']
@@ -923,7 +923,7 @@ Never use `::` for regular method invocation.
 * Consider using explicit block argument to avoid writing block
   literal that just passes its arguments to another block. Beware of
   the performance impact, though, as the block gets converted to a
-  Proc.
+  Proc. [[link]](#explicit-block-argument)
 
     ```Ruby
     require 'tempfile'
@@ -947,7 +947,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Avoid `return` where not required for flow of control.
+* Avoid `return` where not required for flow of control. [[link]](#avoid-return)
 
     ```Ruby
     # bad
@@ -961,7 +961,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Avoid `self` where not required. (It is only required when calling a self write accessor.)
+* Avoid `self` where not required. (It is only required when calling a self write accessor.) [[link]](#avoid-self)
 
     ```Ruby
     # bad
@@ -983,7 +983,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* As a corollary, avoid shadowing methods with local variables unless they are both equivalent.
+* As a corollary, avoid shadowing methods with local variables unless they are both equivalent. [[link]](#shadowing-variables)
 
     ```Ruby
     class Foo
@@ -1014,7 +1014,7 @@ Never use `::` for regular method invocation.
 * Don't use the return value of `=` (an assignment) in conditional
   expressions unless the assignment is wrapped in parentheses. This is
   a fairly popular idiom among Rubyists that's sometimes referred to as
-  *safe assignment in condition*.
+  *safe assignment in condition*. [[link]](#safe-assignment)
 
     ```Ruby
     # bad (+ a warning)
@@ -1037,7 +1037,7 @@ Never use `::` for regular method invocation.
     end
     ```
 
-* Use `||=` freely to initialize variables.
+* Use `||=` freely to initialize variables. [[link]](#or-assignment)
 
     ```Ruby
     # set name to Bozhidar, only if it's nil or false
@@ -1045,7 +1045,7 @@ Never use `::` for regular method invocation.
     ```
 
 * Don't use `||=` to initialize boolean variables. (Consider what
-would happen if the current value happened to be `false`.)
+would happen if the current value happened to be `false`.) [[link]](#or-assigment-2)
 
     ```Ruby
     # bad - would set enabled to true even if it was false
@@ -1055,7 +1055,7 @@ would happen if the current value happened to be `false`.)
     enabled = true if enabled.nil?
     ```
 
-* Use `&&=` to preprocess variables that may or may not exist. Using `&&=` will change the value only if it exists, removing the need to check its existence with `if`.
+* Use `&&=` to preprocess variables that may or may not exist. Using `&&=` will change the value only if it exists, removing the need to check its existence with `if`. [[link]](#and-assignment)
 
     ```Ruby
     # bad
@@ -1075,7 +1075,7 @@ would happen if the current value happened to be `false`.)
 
 * Avoid explicit use of the case equality operator `===`. As its name
   implies it is meant to be used implicitly by `case` expressions and
-  outside of them it yields some pretty confusing code.
+  outside of them it yields some pretty confusing code. [[link]](#case-equality)
 
     ```Ruby
     # bad
@@ -1092,7 +1092,7 @@ would happen if the current value happened to be `false`.)
 * Avoid using Perl-style special variables (like `$:`, `$;`,
   etc. ). They are quite cryptic and their use in anything but
   one-liner scripts is discouraged. Use the human-friendly
-  aliases provided by the `English` library.
+  aliases provided by the `English` library. [[link]](#perl-variables)
 
     ```Ruby
     # bad
@@ -1103,7 +1103,7 @@ would happen if the current value happened to be `false`.)
     $LOAD_PATH.unshift File.dirname(__FILE__)
     ```
 
-* Never put a space between a method name and the opening parenthesis.
+* Never put a space between a method name and the opening parenthesis. [[link]](#method-opening-paren)
 
     ```Ruby
     # bad
@@ -1115,13 +1115,13 @@ would happen if the current value happened to be `false`.)
 
 * If the first argument to a method begins with an open parenthesis,
   always use parentheses in the method invocation. For example, write
-`f((3 + 2) + 1)`.
+`f((3 + 2) + 1)`. [[link]](#first-argument-paren)
 
 * Always run the Ruby interpreter with the `-w` option so it will warn
-you if you forget either of the rules above!
+you if you forget either of the rules above! [[link]](#ruby-warn)
 
 * Use the new lambda literal syntax for single line body blocks. Use the
-  `lambda` method for multi-line blocks.
+  `lambda` method for multi-line blocks. [[link]](#lambda-single-line)
 
     ```Ruby
     # bad
@@ -1144,7 +1144,7 @@ you if you forget either of the rules above!
     end
     ```
 
-* Prefer `proc` over `Proc.new`.
+* Prefer `proc` over `Proc.new`. [[link]](#proc-new)
 
     ```Ruby
     # bad
@@ -1154,7 +1154,7 @@ you if you forget either of the rules above!
     p = proc { |n| puts n }
     ```
 
-* Prefer `proc.call()` over `proc[]` or `proc.()` for both lambdas and procs.
+* Prefer `proc.call()` over `proc[]` or `proc.()` for both lambdas and procs. [[link]](#proc-call)
 
     ```Ruby
     # bad - looks similar to Enumeration access
@@ -1170,7 +1170,7 @@ you if you forget either of the rules above!
     l.call(1)
     ```
 
-* Use `_` for unused block parameters.
+* Use `_` for unused block parameters. [[link]](#underscore-unused)
 
     ```Ruby
     # bad
@@ -1183,14 +1183,14 @@ you if you forget either of the rules above!
 * Use `$stdout/$stderr/$stdin` instead of
   `STDOUT/STDERR/STDIN`. `STDOUT/STDERR/STDIN` are constants, and
   while you can actually reassign (possibly to redirect some stream)
-  constants in Ruby, you'll get an interpreter warning if you do so.
+  constants in Ruby, you'll get an interpreter warning if you do so. [[link]](#stdout)
 
 * Use `warn` instead of `$stderr.puts`. Apart from being more concise
 and clear, `warn` allows you to suppress warnings if you need to (by
-setting the warn level to 0 via `-W0`).
+setting the warn level to 0 via `-W0`). [[link]](#warn-stderr)
 
 * Favor the use of `sprintf` and its alias `format` over the fairly
-  cryptic `String#%` method.
+  cryptic `String#%` method. [[link]](#sprintf)
 
     ```Ruby
     # bad
@@ -1214,7 +1214,7 @@ setting the warn level to 0 via `-W0`).
     ```
 
 * Favor the use of `Array#join` over the fairly cryptic `Array#*` with
-  a string argument.
+  a string argument. [[link]](#array-join)
 
     ```Ruby
     # bad
@@ -1228,7 +1228,7 @@ setting the warn level to 0 via `-W0`).
 
 * Use `[*var]` or `Array()` instead of explicit `Array` check, when dealing with a
   variable you want to treat as an Array, but you're not certain it's
-  an array.
+  an array. [[link]](#splat-var)
 
     ```Ruby
     # bad
@@ -1242,7 +1242,7 @@ setting the warn level to 0 via `-W0`).
     Array(paths).each { |path| do_something(path) }
     ```
 
-* Use ranges or `Comparable#between?` instead of complex comparison logic when possible.
+* Use ranges or `Comparable#between?` instead of complex comparison logic when possible. [[link]](#ranges-between)
 
     ```Ruby
     # bad
@@ -1256,7 +1256,7 @@ setting the warn level to 0 via `-W0`).
     ```
 
 * Favor the use of predicate methods to explicit comparisons with
-  `==`. Numeric comparisons are OK.
+  `==`. Numeric comparisons are OK. [[link]](#predicate-methods)
 
     ```Ruby
     # bad
@@ -1286,9 +1286,9 @@ setting the warn level to 0 via `-W0`).
     end
     ```
 
-* Avoid the use of `BEGIN` blocks.
+* Avoid the use of `BEGIN` blocks. [[link]](#begin-blocks)
 
-* Never use `END` blocks. Use `Kernel#at_exit` instead.
+* Never use `END` blocks. Use `Kernel#at_exit` instead. [[link]](#end-blocks)
 
     ```ruby
     # bad
@@ -1300,11 +1300,11 @@ setting the warn level to 0 via `-W0`).
     at_exit { puts 'Goodbye!' }
     ```
 
-* Avoid the use of flip-flops.
+* Avoid the use of flip-flops. [[link]](#flip-flops)
 
 * Avoid use of nested conditionals for flow of control.
   Prefer a guard clause when you can assert invalid data. A guard clause is a conditional
-  statement at the top of a function that bails out as soon as it can.
+  statement at the top of a function that bails out as soon as it can. [[link]](#nested-conditionals)
 
     ```Ruby
     # bad
@@ -1334,7 +1334,7 @@ setting the warn level to 0 via `-W0`).
 > naming things. <br/>
 > -- Phil Karlton
 
-* Name identifiers in English.
+* Name identifiers in English. [[link]](#english-names)
 
     ```Ruby
     # bad - identifier using non-ascii characters
@@ -1347,7 +1347,7 @@ setting the warn level to 0 via `-W0`).
     salary = 1_000
     ```
 
-* Use `snake_case` for symbols, methods and variables.
+* Use `snake_case` for symbols, methods and variables. [[link]](#snake-case)
 
     ```Ruby
     # bad
@@ -1374,7 +1374,7 @@ setting the warn level to 0 via `-W0`).
     ```
 
 * Use `CamelCase` for classes and modules.  (Keep acronyms like HTTP,
-  RFC, XML uppercase.)
+  RFC, XML uppercase.) [[link]](#camel-case)
 
     ```Ruby
     # bad
@@ -1400,7 +1400,7 @@ setting the warn level to 0 via `-W0`).
     end
     ```
 
-* Use `SCREAMING_SNAKE_CASE` for other constants.
+* Use `SCREAMING_SNAKE_CASE` for other constants. [[link]](#constant-snake-case)
 
     ```Ruby
     # bad
@@ -1413,11 +1413,11 @@ setting the warn level to 0 via `-W0`).
 * The names of predicate methods (methods that return a boolean value)
   should end in a question mark.
   (i.e. `Array#empty?`). Methods that don't return a boolean, shouldn't
-  end in a question mark.
+  end in a question mark. [[link]](#question-boolean)
 * The names of potentially *dangerous* methods (i.e. methods that
   modify `self` or the arguments, `exit!` (doesn't run the finalizers
   like `exit` does), etc.) should end with an exclamation mark if
-  there exists a safe version of that *dangerous* method.
+  there exists a safe version of that *dangerous* method. [[link]](#dangerous-methods)
 
     ```Ruby
     # bad - there is not matching 'safe' method
@@ -1443,7 +1443,7 @@ setting the warn level to 0 via `-W0`).
     ```
 
 * Define the non-bang (safe) method in terms of the bang (dangerous)
-  one if possible.
+  one if possible. [[link]](#non-bang)
 
     ```Ruby
     class Array
@@ -1464,9 +1464,9 @@ setting the warn level to 0 via `-W0`).
     ```
 
 * When using `reduce` with short blocks, name the arguments `|a, e|`
-  (accumulator, element).
+  (accumulator, element). [[link]](#reduce-names)
 * When defining binary operators, name the argument `other`(`<<` and
-  `[]` are exceptions to the rule, since their semantics are different).
+  `[]` are exceptions to the rule, since their semantics are different). [[link]](#binary-operators)
 
     ```Ruby
     def +(other)
@@ -1480,12 +1480,12 @@ setting the warn level to 0 via `-W0`).
   readability, it's ok to use it. The rhyming methods are inherited from
   Smalltalk and are not common in other programming languages. The
   reason the use of `select` is encouraged over `find_all` is that it
-  goes together nicely with `reject` and its name is pretty self-explanatory.
+  goes together nicely with `reject` and its name is pretty self-explanatory. [[link]](#alias-preferences)
 
 * Use `flat_map` instead of `map` + `flatten`.
   This does not apply for arrays with a depth greater than 2, i.e.
   if `users.first.songs == ['a', ['b','c']]`, then use `map + flatten` rather than `flat_map`.
-  `flat_map` flattens the array by 1, whereas `flatten` flattens it all the way.
+  `flat_map` flattens the array by 1, whereas `flatten` flattens it all the way. [[link]](#flatten)
 
     ```Ruby
     # bad
@@ -1496,7 +1496,7 @@ setting the warn level to 0 via `-W0`).
     ```
 
 * Use `reverse_each` instead of `reverse.each`. `reverse_each` doesn't
-  do a new array allocation and that's a good thing.
+  do a new array allocation and that's a good thing. [[link]](#reverse-each)
 
 
     ```Ruby
@@ -1579,7 +1579,7 @@ at all.
 
 ## Classes & Modules
 
-* Use a consistent structure in your class definitions.
+* Use a consistent structure in your class definitions. [[link]](#consistent-structure)
 
     ```Ruby
     class Person
@@ -1618,7 +1618,7 @@ at all.
     ```
 
 * Prefer modules to classes with only class methods. Classes should be
-  used only when it makes sense to create instances out of them.
+  used only when it makes sense to create instances out of them. [[link]](#modules-class-methods)
 
     ```Ruby
     # bad
@@ -1645,7 +1645,7 @@ at all.
     ```
 
 * Favor the use of `module_function` over `extend self` when you want
-  to turn a module's instance methods into class methods.
+  to turn a module's instance methods into class methods. [[link]](#module-function)
 
     ```Ruby
     # bad
@@ -1676,12 +1676,12 @@ at all.
     ```
 
 * When designing class hierarchies make sure that they conform to the
-  [Liskov Substitution Principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle).
+  [Liskov Substitution Principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle). [[link]](#liskov)
 * Try to make your classes as
   [SOLID](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design\))
-  as possible.
+  as possible. [[link]](#SOLID)
 * Always supply a proper `to_s` method for classes that represent
-  domain objects.
+  domain objects. [[link]](#to-s)
 
     ```Ruby
     class Person
@@ -1699,7 +1699,7 @@ at all.
     ```
 
 * Use the `attr` family of functions to define trivial accessors or
-mutators.
+mutators. [[link]](#attr-functions)
 
     ```Ruby
     # bad
@@ -1729,7 +1729,7 @@ mutators.
     end
     ```
 
-* Avoid the use of `attr`. Use `attr_reader` and `attr_accessor` instead.
+* Avoid the use of `attr`. Use `attr_reader` and `attr_accessor` instead. [[link]](#avoid-attr)
 
     ```Ruby
     # bad - creates a single attribute accessor (deprecated in 1.9)
@@ -1742,7 +1742,7 @@ mutators.
     ```
 
 * Consider using `Struct.new`, which defines the trivial accessors,
-constructor and comparison operators for you.
+constructor and comparison operators for you. [[link]](#struct-new)
 
     ```Ruby
     # good
@@ -1760,10 +1760,10 @@ constructor and comparison operators for you.
     end
     ````
 
-* Don't extend a `Struct.new` - it already is a new class. Extending it introduces a superfluous class level and may also introduce weird errors if the file is required multiple times.
+* Don't extend a `Struct.new` - it already is a new class. Extending it introduces a superfluous class level and may also introduce weird errors if the file is required multiple times. [[link]](#extend-struct-new)
 
 * Consider adding factory methods to provide additional sensible ways
-to create instances of a particular class.
+to create instances of a particular class. [[link]](#factory-methods)
 
     ```Ruby
     class Person
@@ -1773,7 +1773,7 @@ to create instances of a particular class.
     end
     ```
 
-* Prefer [duck-typing](http://en.wikipedia.org/wiki/Duck_typing) over inheritance.
+* Prefer [duck-typing](http://en.wikipedia.org/wiki/Duck_typing) over inheritance. [[link]](#duck-typing)
 
     ```Ruby
     # bad
@@ -1812,7 +1812,7 @@ to create instances of a particular class.
     ```
 
 * Avoid the usage of class (`@@`) variables due to their "nasty" behavior
-in inheritance.
+in inheritance. [[link]](#avoid-class-variables)
 
     ```Ruby
     class Parent
@@ -1837,12 +1837,12 @@ in inheritance.
 * Assign proper visibility levels to methods (`private`, `protected`)
 in accordance with their intended usage. Don't go off leaving
 everything `public` (which is the default). After all we're coding
-in *Ruby* now, not in *Python*.
+in *Ruby* now, not in *Python*. [[link]](#method-visibility)
 * Indent the `public`, `protected`, and `private` methods as much the
   method definitions they apply to. Leave one blank line above the
   visibility modifier
   and one blank line below in order to emphasize that it applies to all
-  methods below it.
+  methods below it. [[link]](#method-visibility-indent)
 
     ```Ruby
     class SomeClass
@@ -1863,7 +1863,7 @@ in *Ruby* now, not in *Python*.
     ```
 
 * Use `def self.method` to define singleton methods. This makes the code
-  easier to refactor since the class name is not repeated.
+  easier to refactor since the class name is not repeated. [[link]](#singleton-methods)
 
     ```Ruby
     class TestClass
@@ -1895,7 +1895,7 @@ in *Ruby* now, not in *Python*.
 
 * Signal exceptions using the `fail` method. Use `raise` only when
   catching an exception and re-raising it (because here you're not
-  failing, but explicitly and purposefully raising an exception).
+  failing, but explicitly and purposefully raising an exception). [[link]](#fail-method)
 
     ```Ruby
     begin
@@ -1905,7 +1905,7 @@ in *Ruby* now, not in *Python*.
     end
     ```
 
-* Don't specify `RuntimeError` explicitly in the two argument version of `fail/raise`.
+* Don't specify `RuntimeError` explicitly in the two argument version of `fail/raise`. [[link]](#run-time-error)
 
     ```Ruby
     # bad
@@ -1916,7 +1916,7 @@ in *Ruby* now, not in *Python*.
     ```
 
 * Prefer supplying an exception class and a message as two separate
-  arguments to `fail/raise`, instead of an exception instance.
+  arguments to `fail/raise`, instead of an exception instance. [[link]](#exception-class)
 
     ```Ruby
     # bad
@@ -1932,7 +1932,7 @@ in *Ruby* now, not in *Python*.
   method inside an `ensure` block, the return will take precedence over
   any exception being raised, and the method will return as if no
   exception had been raised at all. In effect, the exception will be
-  silently thrown away.
+  silently thrown away. [[link]](#return-ensure)
 
     ```Ruby
     def foo
@@ -1944,7 +1944,7 @@ in *Ruby* now, not in *Python*.
     end
     ```
 
-* Use *implicit begin blocks* where possible.
+* Use *implicit begin blocks* where possible. [[link]](#implicit-begin)
 
     ```Ruby
     # bad
@@ -1965,7 +1965,7 @@ in *Ruby* now, not in *Python*.
     ```
 
 * Mitigate the proliferation of `begin` blocks by using
-  *contingency methods* (a term coined by Avdi Grimm).
+  *contingency methods* (a term coined by Avdi Grimm). [[link]](#contingency-methods)
 
     ```Ruby
     # bad
@@ -1993,7 +1993,7 @@ in *Ruby* now, not in *Python*.
     with_io_error_handling { something_else_that_might_fail }
     ```
 
-* Don't suppress exceptions.
+* Don't suppress exceptions. [[link]](#suppress-exceptions)
 
     ```Ruby
     # bad
@@ -2007,7 +2007,7 @@ in *Ruby* now, not in *Python*.
     do_something rescue nil
     ```
 
-* Avoid using `rescue` in its modifier form.
+* Avoid using `rescue` in its modifier form. [[link]](#rescue-modifier)
 
     ```Ruby
     # bad - this catches exceptions of StandardError class and its descendant classes
@@ -2022,7 +2022,7 @@ in *Ruby* now, not in *Python*.
     ```
 
 
-* Don't use exceptions for flow of control.
+* Don't use exceptions for flow of control. [[link]](#exceptions-control-flow)
 
     ```Ruby
     # bad
@@ -2041,7 +2041,7 @@ in *Ruby* now, not in *Python*.
     ```
 
 * Avoid rescuing the `Exception` class.  This will trap signals and calls to
-  `exit`, requiring you to `kill -9` the process.
+  `exit`, requiring you to `kill -9` the process. [[link]](#rescue-exception-class)
 
     ```Ruby
     # bad
@@ -2072,7 +2072,7 @@ in *Ruby* now, not in *Python*.
     ```
 
 * Put more specific exceptions higher up the rescue chain, otherwise
-  they'll never be rescued from.
+  they'll never be rescued from. [[link]](#exception-specificity)
 
     ```Ruby
     # bad
@@ -2095,7 +2095,7 @@ in *Ruby* now, not in *Python*.
     ```
 
 * Release external resources obtained by your program in an ensure
-block.
+block. [[link]](#ensure-resources)
 
     ```Ruby
     f = File.open('testfile')
@@ -2109,12 +2109,12 @@ block.
     ```
 
 * Favor the use of exceptions for the standard library over
-introducing new exception classes.
+introducing new exception classes. [[link]](#use-stdlib-exceptions)
 
 ## Collections
 
 * Prefer literal array and hash creation notation (unless you need to
-pass parameters to their constructors, that is).
+pass parameters to their constructors, that is). [[link]](#literal-collections)
 
     ```Ruby
     # bad
@@ -2128,7 +2128,7 @@ pass parameters to their constructors, that is).
 
 * Prefer `%w` to the literal array syntax when you need an array of
 words(non-empty strings without spaces and special characters in them).
-Apply this rule only to arrays with two or more elements.
+Apply this rule only to arrays with two or more elements. [[link]](#word-array)
 
     ```Ruby
     # bad
@@ -2140,7 +2140,7 @@ Apply this rule only to arrays with two or more elements.
 
 * Prefer `%i` to the literal array syntax when you need an array of
 symbols(and you don't need to maintain Ruby 1.9 compatibility). Apply
-this rule only to arrays with two or more elements.
+this rule only to arrays with two or more elements. [[link]](#symbol-array)
 
     ```Ruby
     # bad
@@ -2151,7 +2151,7 @@ this rule only to arrays with two or more elements.
     ```
 
 * Avoid comma after the last item of an `Array` or `Hash` literal, especially
-  when the items are not on separate lines.
+  when the items are not on separate lines. [[link]](#array-comma)
 
     ```Ruby
     # bad - easier to move/add/remove items, but still not preferred
@@ -2168,20 +2168,20 @@ this rule only to arrays with two or more elements.
     VALUES = [1001, 2020, 3333]
     ```
 
-* Avoid the creation of huge gaps in arrays.
+* Avoid the creation of huge gaps in arrays. [[link]](#array-gaps)
 
     ```Ruby
     arr = []
     arr[100] = 1 # now you have an array with lots of nils
     ```
 
-* When accessing the first or last element from an array, prefer `first` or `last` over `[0]` or `[-1]`.
+* When accessing the first or last element from an array, prefer `first` or `last` over `[0]` or `[-1]`. [[link]](#array-first)
 
 * Use `Set` instead of `Array` when dealing with unique elements. `Set`
   implements a collection of unordered values with no duplicates. This
   is a hybrid of `Array`'s intuitive inter-operation facilities and
-  `Hash`'s fast lookup.
-* Prefer symbols instead of strings as hash keys.
+  `Hash`'s fast lookup. [[link]](#set-collection)
+* Prefer symbols instead of strings as hash keys. [[link]](#symbol-keys)
 
     ```Ruby
     # bad
@@ -2191,8 +2191,8 @@ this rule only to arrays with two or more elements.
     hash = { one: 1, two: 2, three: 3 }
     ```
 
-* Avoid the use of mutable objects as hash keys.
-* Use the hash literal syntax when your hash keys are symbols.
+* Avoid the use of mutable objects as hash keys. [[link]](#mutable-keys)
+* Use the hash literal syntax when your hash keys are symbols. [[link]](#hash-literal)
 
     ```Ruby
     # bad
@@ -2205,7 +2205,7 @@ this rule only to arrays with two or more elements.
 * Use `Hash#key?` instead of `Hash#has_key?` and `Hash#value?` instead
   of `Hash#has_value?`. As noted
   [here](http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/43765)
-  by Matz, the longer forms are considered deprecated.
+  by Matz, the longer forms are considered deprecated. [[link]](#has-key)
 
     ```Ruby
     # bad
@@ -2217,7 +2217,7 @@ this rule only to arrays with two or more elements.
     hash.value?(value)
     ```
 
-* Use `Hash#fetch` when dealing with hash keys that should be present.
+* Use `Hash#fetch` when dealing with hash keys that should be present. [[link]](#hash-fetch)
 
     ```Ruby
     heroes = { batman: 'Bruce Wayne', superman: 'Clark Kent' }
@@ -2229,7 +2229,7 @@ this rule only to arrays with two or more elements.
     heroes.fetch(:supermann)
     ```
 
-* Introduce default values for hash keys via `Hash#fetch` as opposed to using custom logic.
+* Introduce default values for hash keys via `Hash#fetch` as opposed to using custom logic. [[link]](#hash-fetch-2)
 
    ```Ruby
    batman = { name: 'Bruce Wayne', is_evil: false }
@@ -2241,7 +2241,7 @@ this rule only to arrays with two or more elements.
    batman.fetch(:is_evil, true) # => false
    ```
 
-* Prefer the use of the block instead of the default value in `Hash#fetch`.
+* Prefer the use of the block instead of the default value in `Hash#fetch`. [[link]](#hash-fetch-3)
 
    ```Ruby
    batman = { name: 'Bruce Wayne' }
@@ -2254,12 +2254,12 @@ this rule only to arrays with two or more elements.
    batman.fetch(:powers) { get_batman_powers }
    ```
 
-* Rely on the fact that as of Ruby 1.9 hashes are ordered.
-* Never modify a collection while traversing it.
+* Rely on the fact that as of Ruby 1.9 hashes are ordered. [[link]](#ordered-hashes)
+* Never modify a collection while traversing it. [[link]](#traverse-collection)
 
 ## Strings
 
-* Prefer string interpolation instead of string concatenation:
+* Prefer string interpolation instead of string concatenation: [[link]](#string-interpolation)
 
     ```Ruby
     # bad
@@ -2270,14 +2270,14 @@ this rule only to arrays with two or more elements.
     ```
 
 * Consider padding string interpolation code with space. It more clearly sets the
-  code apart from the string.
+  code apart from the string. [[link]](#string-interpolation-pad)
 
     ```Ruby
     "#{ user.last_name }, #{ user.first_name }"
     ```
 
 * Prefer single-quoted strings when you don't need string interpolation or
-  special symbols such as `\t`, `\n`, `'`, etc.
+  special symbols such as `\t`, `\n`, `'`, etc. [[link]](#single-quotes)
 
     ```Ruby
     # bad
@@ -2289,7 +2289,7 @@ this rule only to arrays with two or more elements.
 
 * Don't use the character literal syntax `?x`. Since Ruby 1.9 it's
   basically redundant - `?x` would interpreted as `'x'` (a string with
-  a single character in it).
+  a single character in it). [[link]](#character-literal)
 
     ```Ruby
     # bad
@@ -2300,7 +2300,7 @@ this rule only to arrays with two or more elements.
     ```
 
 * Don't leave out `{}` around instance and global variables being
-  interpolated into a string.
+  interpolated into a string. [[link]](#string-interpolation-braces)
 
     ```Ruby
     class Person
@@ -2332,7 +2332,7 @@ this rule only to arrays with two or more elements.
 
 * Avoid using `String#+` when you need to construct large data chunks.
   Instead, use `String#<<`. Concatenation mutates the string instance in-place
-  and is always faster than `String#+`, which creates a bunch of new string objects.
+  and is always faster than `String#+`, which creates a bunch of new string objects. [[link]](#string-concatenation)
 
     ```Ruby
     # good and also fast
@@ -2346,7 +2346,7 @@ this rule only to arrays with two or more elements.
 
 * When using heredocs for multi-line strings keep in mind the fact
   that they preserve leading whitespace. It's a good practice to
-  employ some margin based on which to trim the excessive whitespace.
+  employ some margin based on which to trim the excessive whitespace. [[link]](#heredocs)
 
     ```Ruby
     code = <<-END.gsub(/^\s+\|/, '')
@@ -2365,8 +2365,8 @@ this rule only to arrays with two or more elements.
 > -- Jamie Zawinski
 
 * Don't use regular expressions if you just need plain text search in string:
-  `string['text']`
-* For simple constructions you can use regexp directly through string index.
+  `string['text']` [[link]](#text-search)
+* For simple constructions you can use regexp directly through string index. [[link]](#direct-regex)
 
     ```Ruby
     match = string[/regexp/]             # get content of matched regexp
@@ -2374,7 +2374,7 @@ this rule only to arrays with two or more elements.
     string[/text (grp)/, 1] = 'replace'  # string => 'text replace'
     ```
 
-* Use non-capturing groups when you don't use captured result of parentheses.
+* Use non-capturing groups when you don't use captured result of parentheses. [[link]](#capturing)
 
     ```Ruby
     /(first|second)/   # bad
@@ -2382,7 +2382,7 @@ this rule only to arrays with two or more elements.
     ```
 
 * Don't use the cryptic Perl-legacy variables denoting last regexp group matches
-  (`$1`, `$2`, etc). Use `Regexp.last_match[n]` instead.
+  (`$1`, `$2`, etc). Use `Regexp.last_match[n]` instead. [[link]](#perl-regex)
 
     ```Ruby
     /(regexp)/ =~ string
@@ -2397,7 +2397,7 @@ this rule only to arrays with two or more elements.
 
 
 * Avoid using numbered groups as it can be hard to track what they contain. Named groups
-  can be used instead.
+  can be used instead. [[link]](#numbered-regex)
 
     ```Ruby
     # bad
@@ -2412,11 +2412,11 @@ this rule only to arrays with two or more elements.
     ```
 
 * Character classes have only a few special characters you should care about:
-  `^`, `-`, `\`, `]`, so don't escape `.` or brackets in `[]`.
+  `^`, `-`, `\`, `]`, so don't escape `.` or brackets in `[]`. [[link]](#escape-special-regex)
 
 * Be careful with `^` and `$` as they match start/end of line, not string endings.
   If you want to match the whole string use: `\A` and `\z` (not to be
-  confused with `\Z` which is the equivalent of `/\n?\z/`).
+  confused with `\Z` which is the equivalent of `/\n?\z/`). [[link]](#line-start-end)
 
     ```Ruby
     string = "some injection\nusername"
@@ -2425,7 +2425,7 @@ this rule only to arrays with two or more elements.
     ```
 
 * Use `x` modifier for complex regexps. This makes them more readable and you
-  can add some useful comments. Just be careful as spaces are ignored.
+  can add some useful comments. Just be careful as spaces are ignored. [[link]](#x-modifier)
 
     ```Ruby
     regexp = %r{
@@ -2437,12 +2437,12 @@ this rule only to arrays with two or more elements.
     }x
     ```
 
-* For complex replacements `sub`/`gsub` can be used with block or hash.
+* For complex replacements `sub`/`gsub` can be used with block or hash. [[link]](#sub)
 
 ## Percent Literals
 
 * Use `%()`(it's a shorthand for `%Q`) for single-line strings which require both interpolation
-  and embedded double-quotes. For multi-line strings, prefer heredocs.
+  and embedded double-quotes. For multi-line strings, prefer heredocs. [[link]](#interpolation-embedded)
 
     ```Ruby
     # bad (no interpolation needed)
@@ -2464,7 +2464,7 @@ this rule only to arrays with two or more elements.
 * Avoid `%q` unless you have a string with both `'` and `"` in
   it. Regular string literals are more readable and should be
   preferred unless a lot of characters would have to be escaped in
-  them.
+  them. [[link]](#percent-q)
 
     ```Ruby
     # bad
@@ -2478,7 +2478,7 @@ this rule only to arrays with two or more elements.
     question = '"What did you say?"'
     ```
 
-* Use `%r` only for regular expressions matching *more than* one '/' character.
+* Use `%r` only for regular expressions matching *more than* one '/' character. [[link]](#percent-r)
 
     ```Ruby
     # bad
@@ -2492,7 +2492,7 @@ this rule only to arrays with two or more elements.
     %r(^/blog/2011/(.*)$)
     ```
 
-* Avoid the use of `%x` unless you're going to invoke a command with backquotes in it(which is rather unlikely).
+* Avoid the use of `%x` unless you're going to invoke a command with backquotes in it(which is rather unlikely). [[link]](#percent-x)
 
     ```Ruby
     # bad
@@ -2505,12 +2505,12 @@ this rule only to arrays with two or more elements.
 
 * Avoid the use of `%s`. It seems that the community has decided
   `:"some string"` is the preferred way to created a symbol with
-  spaces in it.
+  spaces in it. [[link]](#percent-s)
 
 * Prefer `()` as delimiters for all `%` literals, except `%r`. Since
   braces often appear inside regular expressions in many scenarios a
   less common character like `{` might be a better choice for a
-  delimiter, depending on the regexp's content.
+  delimiter, depending on the regexp's content. [[link]](#literal-delimiters)
 
     ```Ruby
     # bad
@@ -2524,12 +2524,12 @@ this rule only to arrays with two or more elements.
 
 ## Metaprogramming
 
-* Avoid needless metaprogramming.
+* Avoid needless metaprogramming. [[link]](#avoid-metaprogramming)
 
-* Do not mess around in core classes when writing libraries.
+* Do not mess around in core classes when writing libraries. [[link]](#core-mokeypatch)
   (Do not monkey-patch them.)
 
-* The block form of `class_eval` is preferable to the string-interpolated form.
+* The block form of `class_eval` is preferable to the string-interpolated form. [[link]](#class-eval-block)
   - when you use the string-interpolated form, always supply `__FILE__` and `__LINE__`, so that your backtraces make sense:
 
     ```ruby
@@ -2538,7 +2538,7 @@ this rule only to arrays with two or more elements.
 
   - `define_method` is preferable to `class_eval{ def ... }`
 
-* When using `class_eval` (or other `eval`) with string interpolation, add a comment block showing its appearance if interpolated (a practice used in Rails code):
+* When using `class_eval` (or other `eval`) with string interpolation, add a comment block showing its appearance if interpolated (a practice used in Rails code): [[link]](#class-eval-comments)
 
     ```ruby
     # from activesupport/lib/active_support/core_ext/string/output_safety.rb
@@ -2558,7 +2558,7 @@ this rule only to arrays with two or more elements.
     end
     ```
 
-* Avoid using `method_missing` for metaprogramming because backtraces become messy, the behavior is not listed in `#methods`, and misspelled method calls might silently work, e.g. `nukes.launch_state = false`. Consider using delegation, proxy, or `define_method` instead. If you must use `method_missing`:
+* Avoid using `method_missing` for metaprogramming because backtraces become messy, the behavior is not listed in `#methods`, and misspelled method calls might silently work, e.g. `nukes.launch_state = false`. Consider using delegation, proxy, or `define_method` instead. If you must use `method_missing`: [[link]](#method-missing)
 
   - Be sure to [also define `respond_to_missing?`](http://blog.marc-andre.ca/2010/11/methodmissing-politely.html)
   - Only catch methods with a well-defined prefix, such as `find_by_*` -- make your code as assertive as possible.
@@ -2589,14 +2589,14 @@ this rule only to arrays with two or more elements.
 
 ## Misc
 
-* Write `ruby -w` safe code.
-* Avoid hashes as optional parameters. Does the method do too much? (Object initializers are exceptions for this rule).
+* Write `ruby -w` safe code. [[link]](#safe-code)
+* Avoid hashes as optional parameters. Does the method do too much? (Object initializers are exceptions for this rule). [[link]](#hash-optional-parameters)
 * Avoid methods longer than 10 LOC (lines of code). Ideally, most methods will be shorter than
-  5 LOC. Empty lines do not contribute to the relevant LOC.
-* Avoid parameter lists longer than three or four parameters.
+  5 LOC. Empty lines do not contribute to the relevant LOC. [[link]](#long-methods)
+* Avoid parameter lists longer than three or four parameters. [[link]](#long-parameters)
 * If you really need "global" methods, add them to Kernel
-  and make them private.
-* Use module instance variables instead of global variables.
+  and make them private. [[link]](#global-methods)
+* Use module instance variables instead of global variables. [[link]](#module-instance-variables)
 
     ```Ruby
     # bad
@@ -2612,15 +2612,15 @@ this rule only to arrays with two or more elements.
     Foo.bar = 1
     ```
 
-* Avoid `alias` when `alias_method` will do.
+* Avoid `alias` when `alias_method` will do. [[link]](#alias-method)
 * Use `OptionParser` for parsing complex command line options and
-`ruby -s` for trivial command line options.
-* Prefer `Time.now` over `Time.new` when retrieving the current system time.
-* Code in a functional way, avoiding mutation when that makes sense.
-* Do not mutate arguments unless that is the purpose of the method.
-* Avoid more than three levels of block nesting.
-* Be consistent. In an ideal world, be consistent with these guidelines.
-* Use common sense.
+`ruby -s` for trivial command line options. [[link]](#option-parser)
+* Prefer `Time.now` over `Time.new` when retrieving the current system time. [[link]](#time)
+* Code in a functional way, avoiding mutation when that makes sense. [[link]](#code-functional)
+* Do not mutate arguments unless that is the purpose of the method. [[link]](#mutate-arguments)
+* Avoid more than three levels of block nesting. [[link]](#nesting-levels)
+* Be consistent. In an ideal world, be consistent with these guidelines. [[link]](#be-consistent)
+* Use common sense. [[link]](#common-sense)
 
 ## Tools
 
